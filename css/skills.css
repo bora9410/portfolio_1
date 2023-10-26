@@ -1,0 +1,88 @@
+#skills {
+  
+}
+#skills .wrap {
+  width: 1200px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#skills .wrap .skill-title {
+  width: 50%;
+  padding-top: 100px;
+}
+#skills .wrap .skill-title h2 {
+  font-size: 70px;
+  font-weight: 800;
+  font-family: 'Titillium Web', sans-serif;
+  text-shadow: 1px 1px 2px #525252;
+}
+#skills .wrap .skill-title p {
+  line-height: 1.4;
+  padding-top: 30px;
+  color: #5F5F5F;
+  letter-spacing: -0.6px;
+  font-size: 15px;
+}
+#skills .wrap .skill-list { 
+  width: 55%;
+}
+#skills .wrap .skill-list div{
+  margin-bottom: 40px;
+  line-height: 1.5;
+  position: relative;
+}
+#skills .wrap .skill-list .design{
+
+}
+#skills .wrap .skill-list .pub{
+
+}
+#skills .wrap .skill-list .tool{
+
+}
+#skills .wrap .skill-list div h3 {
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+#skills .wrap .skill-list div h3::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background-color: #E5A732;
+  top: 10px;
+  left: -7px;
+  transform: skewX(-10deg);
+  z-index: -1;
+}
+#skills .wrap .skill-list div.pub h3::before{
+  width: 130px;
+  left: -10px;
+}
+#skills .wrap .skill-list div.tool h3::before{
+  width: 147px;
+  left: -10px;
+}
+#skills .wrap .skill-list div ul {
+  
+}
+#skills .wrap .skill-list div ul li {  
+  list-style: disc;
+  padding-bottom: 5px;
+}
+#skills .wrap .skill-list div ul li span{
+  font-size: 18px;
+}
+#skills .wrap .skill-list div .imgbox {
+  padding-top: 10px;
+}
+#skills .wrap .skill-list div .imgbox img {
+  padding-right: 7px;
+}
+.tooltip{
+ border: 1px solid black;
+}

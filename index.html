@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문보라 | 웹 퍼블리셔 포트폴리오</title>
+    <link rel="icon" href="img/favicon_1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Titillium+Web:wght@200;300;400;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- 제이쿼리 cdn 연결 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <script src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.main_slick').slick({
+                autoplay: true,
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplaspeed: 800,
+                responsve: [
+                    {
+                    breakpoint: 900,
+                    settings: {
+                    arrows: false,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                    }
+                    },
+                    {
+                    breakpoint: 500,
+                    settings: {
+                    arrows: false,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                    }
+                    }
+                ]    
+            });
+
+            // aside top버튼 스크롤업
+            
+        // '맨위로가기' 링크를 클릭했을 때
+        $('.btop').click(function() {
+            // 페이지 맨 위로 부드럽게 스크롤
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            return false; // 링크 이벤트 중단
+        });
+    });
+    </script>
+
+    <!-- AOS 스크롤 애니메이션 -->
+    <!-- css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- aos 스크립트 초기화  -->
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+        });
+    </script>
+    <script>
+        $(function(){
+            //1번코드 종료
+            var c0p;
+			var c1p;
+			var c2p;
+			var c3p;
+			//각 컨텐츠의 위치(위에서 떨어져있는)
+			//$("요소").offset().top : #area1요소의 위치(위에서부터의)값
+            c0p=$("#title").offset().top; 
+			c1p=$("#skills").offset().top; 
+			c2p=$("#portfolio").offset().top;
+			c3p=$("#contact").offset().top;
+
+			// 메뉴클릭시 해당컨텐츠로 페이지스크롤
+            $("header .wrap .header nav ul li:nth-child(2) button").click(function(){
+				$("html,body").animate({scrollTop:c0p},2000);
+			});
+			$("header .wrap .header nav ul li:nth-child(3) button").click(function(){
+				$("html,body").animate({scrollTop:c1p},2000);
+			});
+			$("header .wrap .header nav ul li:nth-child(4) button").click(function(){
+				$("html,body").animate({scrollTop:c2p},2000);
+			});
+			$("header .wrap .header nav ul li:nth-child(5) button").click(function(){
+				$("html,body").animate({scrollTop:c3p},2000);
+			});
+        });
+    </script>
+
+    
+</head>
+<body>
+    <!-- 상단영역 -->
+    <header id="home">
+        <div class="wrap">
+            <div class="header flex">
+                <h1><a class="blind" href="">mylogo</a></h1>
+                <nav>
+                    <ul class="flex">
+                        <li><button class="menu">HOME</button></li>
+                        <li><button class="menu">ABOUT ME</button></li>
+                        <li><button class="menu">SKILLS</button></li>
+                        <li><button class="menu">PORTFOLIO</button></li>
+                        <li><button class="menu">CONTACT</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="firstpage">
+                <div class="first">
+                    <h2>PORTFOLIO<span class="font">OF</span></h2>
+                </div>
+                <br>
+                <div class="second">
+                    <h3>MOON BORA</h3>
+                </div>
+                <p class="mob">안녕하세요! 어제보다 오늘 더 나아지기 위해<br> 노력하는 문보라입니다👋🏻</p>
+            </div>
+            <div class="scroll-downs">
+                <div class="mousey">
+                  <div class="scroller"><span class="blind">스크롤 내리기 아이콘</span> scrolldown</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 타이틀영역 -->
+    <section id="title">
+        <div data-aos="fade-up" data-aos-duration="3000" class="wrap flex">
+            <img class="title-img" src="img/profile_1.jpg" alt="입사지원자 문보라 사진">
+            <div class="txt-box">
+                <h2>
+                    안녕하세요👋🏻 <br>
+                    퍼블리싱 및 접근성 분야에 재미를 느끼고 <br> 
+                    이제 도약을 준비하는 신입 문보라입니다 <span>!</span>
+                </h2>
+                <br>
+                <br>
+                <h3>
+                    새로운 코드를 배우고 웹사이트에 적용하고 꾸며가는 것,<br>
+                    웹표준과 접근성에 맞게 하나씩 수정해가는 것,<br> 
+                    더 깊이있게 배워가는 것은 저에게는 즐거운 일이기에<br> 
+                    이 분야에서 더 나아지기 위해 자발적으로 
+                    꾸준히 노력하고 배우고 있습니다. 
+                    <br>
+                    <br>
+                    온라인 MD로 시작해 퍼블리싱으로 새롭게 전향하게 되었지만, <br>
+                    <span class="point">방향을 알게 되었으니 이제는 보폭을 늘려 더 멀리 뛰는 데에 집중</span>하고 싶습니다.🙌🏻
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 내용영역 -->
+    <main>
+        <section id="skills">
+            <div class="wrap flex">
+                <div class="skill-title">
+                    <h2 data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500" data-aos-easing="ease-in-sine">Tech Stack</h2>
+                    <p data-aos="fade-right" data-aos-offset="300" data-aos-duration="1800" data-aos-delay="500" data-aos-easing="ease-in-sine">제가 이전 직장생활을 통해 사용한 것들과 <br> 퍼블리싱과정 학습을 통해 배운 것들입니다.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" class="skill-list">
+                    <div class="design">
+                        <h3>디자인</h3>
+                        <ul>
+                            <li>MD로 근무하며 <span class="point">Photoshop</span>을 꾸준히 사용해왔으며
+                                상단 배너 제작, <br> 소셜 커머스 행사용 이미지 제작도 
+                                했었기에 다양한 작업이 가능합니다
+                            </li>
+                            <li> <span class="point">Illustrator</span>툴에 대한 기초 작업이 가능합니다</li>
+                        </ul>
+                        <div class="imgbox">
+                            <img src="img/icon_ps.png" alt="포토샵">
+                            <img src="img/icon_ai.png" alt="일러스트레이터">
+                        </div>
+                    </div>
+                    <div class="pub">
+                        <h3>퍼블리싱</h3>
+                        <ul>
+                            <li>퍼블리싱 과정을 공부하면서 <span class="point">HTML, CSS, JQuary, 
+                                Java script</span> 등을 배웠으며,<br>
+                                 시멘틱 구조에 맞게 코드를
+                                구성해 최대한 웹 접근성을 높여 작업할 수 있습니다
+                            </li>
+                            <li><span class="point">Vue.js</span>에 대한 기초적인 지식이 있습니다</li>
+                        </ul>
+                        <div class="imgbox">
+                            <img src="img/icon_html.png" alt="HTML">
+                            <img src="img/icon_css.png" alt="CSS">
+                            <img src="img/icon_jquery.png" alt="JQuary">
+                            <img src="img/icon_javascript.png" alt="Java script">
+                            <img src="img/icon_vue.png" alt="vue">
+                        </div>
+                    </div>
+                    <div class="tool">
+                        <h3>그 외의 툴</h3>
+                        <ul>
+                            <li><span class="point">SASS, 젠코딩</span>을 통한 HTML 구조를 만들기가 가능합니다</li>
+                            <li><span class="point">VS CODE</span> 이용 및 단축키 사용으로 빠른 작업이 가능합니다</li>
+                        </ul>
+                        <div class="imgbox">
+                            <img src="img/icon_sass.png" alt="sass">
+                            <img src="img/icon_vscode.png" alt="vs code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500" data-aos-easing="ease-in-sine" class="portfolio-title">
+                <h2>Portfolio</h2>
+                <p>완벽하진 않지만, 그동안 학습한 것들을 기반으로 <br> 저만의 방식에 맞게 열심히 만든 클론 코딩사이트입니다.<br> 접근성 향상을 위해 다양한 검사 도구도 함께 사용했습니다.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000" class="wrap padding50 main_slick">
+                <div class="pf-1 flex">
+                    <div class="txt-container">
+                        <div class="txtbox-1">
+                            <h3><span>[ WEB, MOBILE ]</span>한국알콜산업 KAI</h3>
+                        </div>
+                        <div class="txtbox-2">
+                            <h4>📍 기술 스택</h4>
+                            <p>HTML, CSS, SCSS, Javascript, Jquery</p>
+                            <h4>📍 프로젝트 구분</h4>
+                            <p>개인프로젝트 (참여도 100%)</p>
+                            <h4>📍 웹표준, 접근성 검사</h4>
+                            <p>OpenWax, W3C 마크업, WAVE tools(접근성 검사기) <br> CCA(색 명암 분석기) 검사 진행 및 수정</p>
+                            <div class="link">
+                                <a target="_blank" class="more" href="https://bora9410.github.io/kai/"><span class="blind">새 창</span>SITE VIEW</a>
+                                <a target="_blank" class="more" href="https://github.com/bora9410/kai"><span class="blind">새 창</span>Github 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="img/kai.png" alt="한국알콜산업 kai 메인페이지 사진">
+                        <figcaption class="visually-hidden">한국알콜산업 kai 메인페이지 사진 캡쳐본</figcaption>
+                    </figure>
+                    <span class="portfolio-number">01</span>
+                </div>
+                <div class="pf-2 flex">
+                    <div class="txt-container">
+                        <div class="txtbox-1">
+                            <h3><span>[ WEB, MOBILE ]</span> PANTONE</h3>
+                        </div>
+                        <div class="txtbox-2">
+                            <h4>📍 기술 스택</h4>
+                            <p>HTML, CSS, SCSS, Javascript, Jquery</p>
+                            <h4>📍 프로젝트 구분</h4>
+                            <p>개인프로젝트 (참여도 100%)</p>
+                            <h4>📍 웹표준, 접근성 검사</h4>
+                            <p>OpenWax, W3C 마크업, WAVE tools(접근성 검사기) <br> CCA(색 명암 분석기) 검사 진행 및 수정</p>
+                            <div class="link">
+                                <a target="_blank" class="more" href="https://bora9410.github.io/pantone/"><span class="blind">새 창</span>SITE VIEW</a>
+                                <a target="_blank" class="more" href="https://github.com/bora9410/pantone"><span class="blind">새 창</span>Github 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="img/panton.png" alt="panton 메인페이지 사진">
+                        <figcaption class="visually-hidden">panton 메인페이지 사진 캡쳐본</figcaption>
+                    </figure>
+                    <span class="portfolio-number">02</span>
+                </div>
+                <div class="pf-3 flex">
+                    <div class="txt-container">
+                        <div class="txtbox-1">
+                            <h3><span>[ WEB, MOBILE ]</span> 스픽</h3>
+                        </div>
+                        <div class="txtbox-2">
+                            <h4>📍 기술 스택</h4>
+                            <p>HTML, CSS, SCSS, Javascript, Jquery</p>
+                            <h4>📍 프로젝트 구분</h4>
+                            <p>개인프로젝트 (참여도 100%)</p>
+                            <h4>📍 웹표준, 접근성 검사</h4>
+                            <p>OpenWax, W3C 마크업, WAVE tools(접근성 검사기) <br> 검사 진행 및 수정</p>
+                            <div class="link">
+                                <a target="_blank" class="more" href="https://bora9410.github.io/speak/"><span class="blind">새 창</span>SITE VIEW</a>
+                                <a target="_blank" class="more" href="https://github.com/bora9410/speak"><span class="blind">새 창</span>Github 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="img/speak.png" alt="스픽 영어 메인페이지 사진">
+                        <figcaption class="visually-hidden">스픽 영어 메인페이지 사진 캡쳐본</figcaption>
+                    </figure>
+                    <span class="portfolio-number">03</span>
+                </div>
+                <div class="pf-4 flex">
+                    <div class="txt-container">
+                        <div class="txtbox-1">
+                            <h3><span>[ WEB ]</span> CGV</h3>
+                        </div>
+                        <div class="txtbox-2">
+                            <h4>📍 기술 스택</h4>
+                            <p>HTML, CSS, SCSS, Javascript, Jquery</p>
+                            <h4>📍 프로젝트 구분</h4>
+                            <p>개인프로젝트 (참여도 100%)</p>
+                            <h4>📍 웹표준, 접근성 검사</h4>
+                            <p>OpenWax, W3C 마크업, WAVE tools(접근성 검사기) <br> CCA(색 명암 분석기) 검사 진행 및 수정</p>
+                            <div class="link">
+                                <a target="_blank" class="more" href="https://bora9410.github.io/cgv/"><span class="blind">새 창</span>SITE VIEW</a>
+                                <a target="_blank" class="more" href="https://github.com/bora9410/cgv"><span class="blind">새 창</span>Github 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="img/cgv.png" alt="CGV 영화 메인페이지 사진">
+                        <figcaption class="visually-hidden">CGV 영화 메인페이지 사진 캡쳐본</figcaption>
+                    </figure>
+                    <span class="portfolio-number">04</span>
+                </div>
+                <div class="pf-5 flex">
+                    <div class="txt-container">
+                        <div class="txtbox-1">
+                            <h3><span>[ WEB ]</span> 프로스펙스</h3>
+                        </div>
+                        <div class="txtbox-2">
+                            <h4>📍 기술 스택</h4>
+                            <p>HTML, CSS, SCSS, Javascript, Jquery</p>
+                            <h4>📍 프로젝트 구분</h4>
+                            <p>개인프로젝트 (참여도 100%)</p>
+                            <h4>📍 접근성 검사</h4>
+                            <p>OpenWax, W3C 마크업, WAVE tools(접근성 검사기) <br> 검사 진행 및 수정</p>
+                            <div class="link">
+                                <a target="_blank" class="more" href="https://bora9410.github.io/prospecs/"><span class="blind">새 창</span>SITE VIEW</a>
+                                <a target="_blank" class="more" href="https://github.com/bora9410/prospecs"><span class="blind">새 창</span>Github 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="img/prospecs.png" alt="프로스펙스 메인페이지 사진">
+                        <figcaption class="visually-hidden">프로스펙스 메인페이지 사진 캡쳐본</figcaption>
+                    </figure>
+                    <span class="portfolio-number">05</span>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="wrap flex">
+                <div data-aos="fade-up" data-aos-duration="3000" class="txtbox-1">
+                    <h2 class="visually-hidden">마지막 한 마디</h2>
+                    <h3>
+                        제가 가진 가장 큰 장점이자 강점은,<br>
+                        <span class="point">도전정신과 끈기가 좋다</span>는 점입니다
+                        <br>
+                        <br>
+                        새로운 업무가 주어져도 추진력 있게<br>
+                        진행할 수 있으며, 끈기있게 마무리 해낼 수 있습니다.
+                        <br>
+                        <br>
+                        제가 가진 이 장점들을 좋은 쪽으로 잘 쓰여져 <br>
+                        <span class="point">함께 발전해가고 싶습니다.</span>
+                        <br>
+                        <br>
+                        제 포트폴리오를 봐주셔서 감사합니다! 
+                    </h3>
+
+                </div>
+                <ul data-aos="fade-up" data-aos-duration="3000" data-aos-delay="500" class="contact_list">
+                    <li class="flex">
+                        <h4>E-MAIL</h4>
+                        <a href="mailto:qhfk8804@gmail.com"><span class="blind">새 창</span>qhfk8804@gmail.com</a>
+                    </li>
+                    <li class="flex">
+                        <h4>RESUME</h4>
+                        <a target="_blank" href="https://drive.google.com/file/d/1scJNG2_ZAvYTEm10V3eHAfVxF0r5ZDWY/view?usp=sharing"><span class="blind">새 창</span>click me!</a>
+                    </li>
+                </ul>
+                <img src="img/me_1.png" alt="손 흔드는 모습의 이모티콘">
+            </div>
+        </section>
+    </main>
+
+    <!-- 하단영역 -->
+    <footer>
+        <div class="wrap">
+            <span>본 페이지는 상업적 목적이 아닌 포트폴리오 용도로 제작되었습니다. </span>
+            <p class="copyright">© 2023 MOON BORA All Rights Reserved.</p>
+        </div>
+        <a href="" class="btop">맨위로가기</a>
+    </footer>
+</body>
+</html>
